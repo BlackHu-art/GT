@@ -334,7 +334,7 @@
         <provider
             android:name="com.tencent.mid.api.MidProvider"
             android:authorities="com.tencent.wstt.gt.TENCENT.MID.V3"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <activity android:name=".activity.GTRDetail_LineChartActivity"
             android:theme="@style/translucent" >

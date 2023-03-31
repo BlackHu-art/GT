@@ -10,12 +10,12 @@ android {
         }
     }
 
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 32
+    buildToolsVersion '28.0.0'
     defaultConfig {
         applicationId "com.tencent.wstt.gt"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 32
         versionCode 33001
         versionName "3.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -55,11 +55,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
     implementation project(':datatool')
-    implementation 'com.android.support:support-v13:25.3.1+'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v13:28.0.0'
 }
